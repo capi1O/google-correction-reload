@@ -1,0 +1,30 @@
+{
+
+	"manifest_version": 2,
+	"name": "Google Correction Reload",
+	"version": "1.0",
+
+	"description": "Reloads the page on \"show results for ...\" click on Google Search",
+
+	"icons":
+	{
+		"48": "icons/reload-48.png"
+	},
+
+	"applications":
+	{
+		"gecko":
+		{
+			"id": "google-correction-reload@example.com"
+		}
+	},
+
+	"content_scripts":
+	[
+		{
+			"matches": ["*://*.google.com/*"],
+			"js": ["index.js"]
+		}
+	]
+
+}
